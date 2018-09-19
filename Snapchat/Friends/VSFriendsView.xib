@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VSFriendsView" customModule="Snapchat" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomGradientLayer" destination="iJd-lo-X6n" id="rNK-x9-qeo"/>
+                <outlet property="friendsTableView" destination="HrQ-o4-Rmp" id="ofs-sk-Z79"/>
+                <outlet property="gradientLayer" destination="5Ne-mG-KI7" id="P8n-Mz-Tqj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="572"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="HrQ-o4-Rmp">
+                    <rect key="frame" x="0.0" y="0.0" width="345" height="572"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="JLL-sL-bXS"/>
+                        <outlet property="delegate" destination="-1" id="VW6-17-kAp"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-mG-KI7">
+                    <rect key="frame" x="0.0" y="0.0" width="345" height="74"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="74" id="yKk-9o-b12"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJd-lo-X6n">
+                    <rect key="frame" x="0.0" y="472" width="345" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="PnF-pC-kzg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HrQ-o4-Rmp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0cN-di-jQx"/>
+                <constraint firstAttribute="trailing" secondItem="iJd-lo-X6n" secondAttribute="trailing" id="CJm-st-ghZ"/>
+                <constraint firstAttribute="bottom" secondItem="HrQ-o4-Rmp" secondAttribute="bottom" id="Pts-2F-gMQ"/>
+                <constraint firstItem="5Ne-mG-KI7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="amk-uJ-eyY"/>
+                <constraint firstAttribute="trailing" secondItem="5Ne-mG-KI7" secondAttribute="trailing" id="bqz-ni-Yu9"/>
+                <constraint firstAttribute="bottom" secondItem="iJd-lo-X6n" secondAttribute="bottom" id="cgW-xQ-jeB"/>
+                <constraint firstItem="HrQ-o4-Rmp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hD8-TH-rOL"/>
+                <constraint firstItem="5Ne-mG-KI7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="n6J-ri-WYF"/>
+                <constraint firstItem="iJd-lo-X6n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nbA-Ki-XVm"/>
+                <constraint firstAttribute="trailing" secondItem="HrQ-o4-Rmp" secondAttribute="trailing" id="oI6-xn-PTf"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="12.5" y="-46"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="VSHomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VSHomeController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ci3-ZS-ct1" userLabel="CameraView" customClass="VSCameraView" customModule="Snapchat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UET-L9-9nw">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.51764705882352935" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-81-mbO" customClass="VSControllerDisplayNode" customModule="Snapchat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sd6-Io-bWk">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BX-af-GT7" customClass="VSTopbarView" customModule="Snapchat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="WUf-zv-j1m"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEx-G9-UHP" customClass="VSEffectsView" customModule="Snapchat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="523" width="375" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="kJV-ag-BcS"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dp0-2d-ebh">
+                                <rect key="frame" x="131" y="279.5" width="112" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="OKN-kz-Caa"/>
+                                    <constraint firstAttribute="height" constant="128" id="qhI-An-AEZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-iU-gZP">
+                                <rect key="frame" x="259" y="540" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7n6-7N-aa6"/>
+                                    <constraint firstAttribute="width" constant="30" id="mjJ-lN-9BX"/>
+                                </constraints>
+                                <state key="normal" image="effect"/>
+                                <connections>
+                                    <action selector="showEffect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohp-MI-x2r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvD-BB-LBv">
+                                <rect key="frame" x="172" y="612" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="26D-3u-dpm"/>
+                                    <constraint firstAttribute="height" constant="30" id="JZ7-cz-ZQs"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="hideEffect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egl-vh-Lhn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-AU-uCh">
+                                <rect key="frame" x="330" y="612" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1l6-Ny-0Wu"/>
+                                    <constraint firstAttribute="width" constant="30" id="w50-8W-cDV"/>
+                                </constraints>
+                                <state key="normal" image="discover"/>
+                                <connections>
+                                    <action selector="showDiscoverController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qN-h7-RBj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DA6-wq-bK3">
+                                <rect key="frame" x="172" y="612" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DA6-wq-bK3" secondAttribute="height" multiplier="1:1" id="GPH-5M-0fV"/>
+                                    <constraint firstAttribute="width" constant="30" id="wP8-rv-JQj"/>
+                                </constraints>
+                                <state key="normal" image="memories"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdY-3B-9lM">
+                                <rect key="frame" x="155" y="523" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="HRQ-aU-ldZ"/>
+                                    <constraint firstAttribute="height" constant="64" id="aPS-IK-Yfu"/>
+                                </constraints>
+                                <state key="normal" image="capture"/>
+                                <connections>
+                                    <action selector="didTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bl8-Zb-iMY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-bJ-elB">
+                                <rect key="frame" x="15" y="612" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bec-9J-aGC"/>
+                                    <constraint firstAttribute="width" constant="30" id="jsy-8Q-xej"/>
+                                </constraints>
+                                <state key="normal" image="friends"/>
+                                <connections>
+                                    <action selector="showFriendsController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gu-QL-yRy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cEO-81-mbO" secondAttribute="trailing" id="0Cf-KO-LGJ"/>
+                            <constraint firstItem="cEO-81-mbO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0jE-4L-nvc"/>
+                            <constraint firstItem="Dp0-2d-ebh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3fg-Vt-ulE"/>
+                            <constraint firstItem="UET-L9-9nw" firstAttribute="height" secondItem="ci3-ZS-ct1" secondAttribute="height" id="4l8-Qo-RGe"/>
+                            <constraint firstItem="pvD-BB-LBv" firstAttribute="centerX" secondItem="DA6-wq-bK3" secondAttribute="centerX" id="7Uo-y5-7du"/>
+                            <constraint firstItem="EOt-iU-gZP" firstAttribute="centerY" secondItem="DdY-3B-9lM" secondAttribute="centerY" id="9IP-dh-sUv"/>
+                            <constraint firstAttribute="bottom" secondItem="cEO-81-mbO" secondAttribute="bottom" id="9Vh-H1-LPf"/>
+                            <constraint firstItem="UET-L9-9nw" firstAttribute="centerX" secondItem="ci3-ZS-ct1" secondAttribute="centerX" id="AZ5-6f-Lf1"/>
+                            <constraint firstItem="EOt-iU-gZP" firstAttribute="leading" secondItem="DdY-3B-9lM" secondAttribute="trailing" constant="40" id="Ba3-69-9tf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ARr-bJ-elB" secondAttribute="bottom" constant="25" id="Cxd-3M-TTM"/>
+                            <constraint firstItem="ci3-ZS-ct1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dfe-zh-8tX"/>
+                            <constraint firstItem="DA6-wq-bK3" firstAttribute="top" secondItem="DdY-3B-9lM" secondAttribute="bottom" constant="25" id="FEh-AO-ayd"/>
+                            <constraint firstItem="Dp0-2d-ebh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LPh-6g-iz6"/>
+                            <constraint firstItem="cEO-81-mbO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PSa-Lm-Klm"/>
+                            <constraint firstItem="DdY-3B-9lM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PnN-gr-zo0"/>
+                            <constraint firstItem="UET-L9-9nw" firstAttribute="width" secondItem="ci3-ZS-ct1" secondAttribute="width" id="Tdz-3o-NkR"/>
+                            <constraint firstItem="0BX-af-GT7" firstAttribute="centerX" secondItem="ci3-ZS-ct1" secondAttribute="centerX" id="Utv-47-uvw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EN8-AU-uCh" secondAttribute="trailing" constant="15" id="VKz-bw-05s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DdY-3B-9lM" secondAttribute="bottom" constant="80" id="VyE-kD-VMR"/>
+                            <constraint firstItem="0BX-af-GT7" firstAttribute="width" secondItem="ci3-ZS-ct1" secondAttribute="width" id="YE3-gT-jVj"/>
+                            <constraint firstItem="pvD-BB-LBv" firstAttribute="centerY" secondItem="DA6-wq-bK3" secondAttribute="centerY" id="ZkB-R4-liP"/>
+                            <constraint firstItem="UET-L9-9nw" firstAttribute="centerY" secondItem="ci3-ZS-ct1" secondAttribute="centerY" id="db4-BI-08Y"/>
+                            <constraint firstItem="ci3-ZS-ct1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e1N-Sj-hEA"/>
+                            <constraint firstItem="sEx-G9-UHP" firstAttribute="centerY" secondItem="DdY-3B-9lM" secondAttribute="centerY" id="fc0-Me-nni"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EN8-AU-uCh" secondAttribute="bottom" constant="25" id="fwE-i5-hSm"/>
+                            <constraint firstItem="sEx-G9-UHP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gRp-88-3Am"/>
+                            <constraint firstAttribute="bottom" secondItem="ci3-ZS-ct1" secondAttribute="bottom" id="hLR-tA-mKa"/>
+                            <constraint firstItem="ARr-bJ-elB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="iCW-Gc-Pmm"/>
+                            <constraint firstItem="0BX-af-GT7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jaq-YY-X5k"/>
+                            <constraint firstItem="sEx-G9-UHP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="o2f-CB-eaa"/>
+                            <constraint firstItem="DA6-wq-bK3" firstAttribute="centerX" secondItem="sEx-G9-UHP" secondAttribute="centerX" id="ooN-GK-1Sk"/>
+                            <constraint firstAttribute="trailing" secondItem="ci3-ZS-ct1" secondAttribute="trailing" id="pNf-g6-sbt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCapture" destination="DdY-3B-9lM" id="8hS-ac-cPp"/>
+                        <outlet property="btnCaptureBottomConstraint" destination="VyE-kD-VMR" id="mJN-x7-n2i"/>
+                        <outlet property="btnDiscover" destination="EN8-AU-uCh" id="nMb-kc-UZs"/>
+                        <outlet property="btnDiscoverTrailingConstraint" destination="VKz-bw-05s" id="J61-uR-fUr"/>
+                        <outlet property="btnEffectHide" destination="pvD-BB-LBv" id="jsi-hy-fUt"/>
+                        <outlet property="btnEffectShow" destination="EOt-iU-gZP" id="9pT-fO-iE2"/>
+                        <outlet property="btnFriends" destination="ARr-bJ-elB" id="dRz-yY-8ra"/>
+                        <outlet property="btnFriendsLeadingConstraint" destination="iCW-Gc-Pmm" id="6JP-rJ-KMS"/>
+                        <outlet property="btnMemories" destination="DA6-wq-bK3" id="UC0-BF-Opu"/>
+                        <outlet property="cameraView" destination="ci3-ZS-ct1" id="5EN-TZ-xOe"/>
+                        <outlet property="captureImageView" destination="Dp0-2d-ebh" id="3On-ng-m3b"/>
+                        <outlet property="container" destination="cEO-81-mbO" id="39f-vq-v7U"/>
+                        <outlet property="effectView" destination="sEx-G9-UHP" id="5FG-Qx-8tA"/>
+                        <outlet property="overlayView" destination="UET-L9-9nw" id="O28-rX-FSK"/>
+                        <outlet property="topbarView" destination="0BX-af-GT7" id="9g6-td-IID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="capture" width="100" height="100"/>
+        <image name="close" width="100" height="100"/>
+        <image name="discover" width="100" height="100"/>
+        <image name="effect" width="100" height="100"/>
+        <image name="friends" width="100" height="100"/>
+        <image name="memories" width="100" height="100"/>
+    </resources>
+</document>
